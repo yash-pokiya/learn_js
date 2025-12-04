@@ -1,0 +1,73 @@
+/* Page center */
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #3f2b96, #a8c0ff);
+    font-family: "Poppins", sans-serif;
+}
+
+/* Card styling */
+.qr-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    width: 340px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* Title */
+.title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Input field */
+.inputField {
+    height: 45px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: none;
+    padding-left: 12px;
+}
+
+/* QR Image box */
+.imgBox {
+    width: 180px;
+    height: 180px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Button */
+.btn-generate {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #00d4ff;
+    color: #003049;
+    transition: 0.25s;
+}
+
+.btn-generate:hover {
+    background: #00aacc;
+    transform: scale(1.05);
+}
