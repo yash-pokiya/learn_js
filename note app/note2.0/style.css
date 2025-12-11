@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: #eef1f5;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.container{
+    width: 380px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.input-box{
+    display: flex;
+    gap: 10px;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#addBtn{
+    padding: 10px 15px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#addBtn:hover{
+    background: #3d7bc7;
+}
+
+.notes{
+    margin-top: 20px;
+    list-style: none;
+}
+
+.notes li{
+    background: #f7f7f7;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.note-text{
+    flex: 1;
+}
+
+.btns{
+    display: flex;
+    gap: 8px;
+}
+
+.edit, .delete{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit{
+    background: #ffc107;
+}
+
+.delete{
+    background: #e74c3c;
+    color: white;
+}
+/* Card wrapper */
+#notesList div {
+    background: #ffffff;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Card title input */
+#notesList div input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Card textarea */
+#notesList div textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    resize: none;
+    height: 100px;
+}
+
+/* Focus effects */
+#notesList div input:focus,
+#notesList div textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74,144,226,0.4);
+}
+
+/* List styling reset */
+#notesList {
+    list-style: none;
+    padding: 0;
+}
+/* Button container (optional if you wrap buttons later) */
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Common button styling */
+#notesList button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+/* Edit Button */
+#notesList button.editBtn {
+    background: #ffc107;
+    color: #000;
+}
+
+#notesList button.editBtn:hover {
+    background: #e0a800;
+}
+
+/* Delete Button */
+#notesList button.deleteBtn {
+    background: #e74c3c;
+    color: white;
+}
+#notesList button.saveBtn {
+    background: rgb(67, 186, 67);
+    color: white;
+}
+#notesList button.saveBtn:hover {
+    background: #049a24;
+}
+#notesList button.deleteBtn:hover {
+    background: #c0392b;
+}

@@ -3,6 +3,7 @@
 // isFollow = false;
 // console.log("is follow ? = " + isfollow);
 
+
 // const student ={
 //     fullName : "yash",
 //     rollNo : 101,
@@ -3273,5 +3274,181 @@
 // let abc = JSON.stringify(Object.entries(settings).flat(Infinity)).length;
 // console.log(abc);
 
-let arr = [{key:"name", value:"Yash"}, {key:"age", value:"21"}];
-console.log(Object.entries(arr));
+// let arr = [{key:"name", value:"Yash"}, {key:"age", value:"21"}];
+// console.log(Object.entries(arr));
+
+// let wait = (ms) => {
+//     return new Promise((resolve,reject) => {
+//         setTimeout(() => {
+//             resolve();
+//         },ms)
+//     })
+// }
+// let count = async() => {
+//     await wait(1000);
+//     console.log(1);
+//     await wait(1000);
+//     console.log(2);
+//     await wait(1000);
+//     console.log(3);
+// }
+// count();
+// console.log(1);
+
+// let arr = [100,"yash",20,"pokiya","c","f","z",5,"abc",2,6];
+// let num = [];
+// let str = [];
+// let ch = [];
+// arr.forEach((a) => {
+//     if(typeof(a) === "string"){
+//         if(a.length<=1){
+//             ch.push(a);
+//         }else{
+//             str.push(a);
+//         }
+//     }else{
+//         num.push(a);
+//     }
+// })
+
+// console.log(num);
+// console.log(str);
+// console.log(ch);
+
+
+// import {itemsMain} from './testDom.js';
+// console.log(itemsMain);
+    
+// const user = {
+//   profile: {
+//     address: {
+//       city: "Surat",
+//     street : {
+//          street(){
+//             return "street101";
+//         },
+//         stree2 : "yashhhhh"
+//     } 
+//     }
+//   }
+// };
+
+// console.log(user.profile.address.city);
+// console.log(user?.profile?.address?.street?.street?.().stree2);
+
+// let students = [
+//   { name: "Yash", marks: 55 },
+//   { name: "Raj", marks: 78 },
+//   { name: "Amit", marks: 92 }
+// ];
+
+// let filtered = students.filter((a) => {
+//   return a.marks > 60;
+// })
+// console.log(filtered);
+
+// let names = ["yash", "raj", "amit"];
+// let upper = names.map((a) => {
+//   return a.toUpperCase();
+// })
+// console.log(upper);
+
+// let products = [
+//   { name: "TV", price: 20000 },
+//   { name: "Mouse", price: 500 },
+//   { name: "Bag", price: 300 }
+// ];
+
+// let finds = products.find((a) => {
+//   return a.price > 500;
+// })
+// console.log(finds);
+// let prices = [200, 350, 1000];
+// let red = prices.reduce((acc,curr) => {
+//   return acc+=curr
+// },0);
+// console.log(red);
+
+// let word = "banana";
+
+// let count = word.split("").reduce((acc,curr) => {
+
+//   if(!acc[curr]){
+//     acc[curr] = 0;
+//   }
+//   acc[curr]++;
+//   return acc;
+// },[]);
+
+// console.log(count);
+
+// let users = [
+//   { name: "Yash", age: 22 },
+//   { name: "Amit", age: 29 },
+//   { name: "Raj", age: 18 }
+// ];
+
+// let sorted = users.sort((a,b) => b.age - a.age);
+// console.log(sorted);
+
+// let orders = [
+//   { item: "laptop", price: 45000 },
+//   { item: "mouse", price: 500 },
+//   { item: "keyboard", price: 1500 }
+// ];
+
+// let mapped = orders.map((a) => {
+//   return a.item;
+// })
+
+// let calc = orders.reduce((acc,curr) => {
+//   return acc+=curr.price;
+// },0);
+// console.log(calc);
+
+// let users = [
+//   { name: "Yash", city: "Surat" },
+//   { name: "Raj", city: "Vadodara" },
+//   { name: "Amit", city: "Surat" }
+// ];
+
+// let grouped = users.reduce((acc,user) => {
+//   if(!acc[user.city]){
+//     acc[user.city] = [];
+//   }
+//   acc[user.city].push(user.name);
+//   return acc
+// },{})
+// console.log(grouped);
+
+// let arr1 = [1,2,3];
+// arr1.push(4)
+// let arr2 = [...arr1];
+// console.log(arr2);
+
+// function cloneArr(arr1,arr2){
+//   return arr1.concat(arr2).join(",");
+// }
+
+// console.log(cloneArr(arr1,arr2));
+
+// function sum(...arr2){
+//  return arr2.reduce((acc,curr) => {
+//     return acc+=curr;
+//   },0);
+// }
+
+
+// console.log(sum(...arr1));
+// let name = "yash";
+// let id = 101;
+// let x = {
+//     name,
+//     id
+// };
+// console.log(x);
+
+let arr = ["yash" , 25];
+let [name,age] = arr;
+console.log(name);
+console.log(age);

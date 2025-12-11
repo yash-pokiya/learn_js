@@ -52,23 +52,23 @@
 //   });
 // });
 
-// const itemsMain = [
-//   "Apple",
-//   "Banana",
-//   "Cherry",
-//   "Date",
-//   "Elderberry",
-//   "Fig",
-//   "Grape",
-//   "Honeydew",
-//   "Kiwi",
-//   "Lemon",
-//   "Mango",
-//   "Nectarine",
-//   "Orange",
-//   "Papaya",
-//   "Quince",
-// ];
+export let itemsMain = [
+  "Apple",
+  "Banana",
+  "Cherry",
+  "Date",
+  "Elderberry",
+  "Fig",
+  "Grape",
+  "Honeydew",
+  "Kiwi",
+  "Lemon",
+  "Mango",
+  "Nectarine",
+  "Orange",
+  "Papaya",
+  "Quince",
+];
 
 // let funcFetch = async() => {
 //   const arr = await fetch("https://jsonplaceholder.typicode.com/users")
