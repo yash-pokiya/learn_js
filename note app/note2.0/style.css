@@ -1,43 +1,43 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-body{
+body {
     background: #eef1f5;
     display: flex;
     justify-content: center;
     padding-top: 40px;
 }
 
-.container{
+.container {
     width: 380px;
     background: #fff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
 }
 
-h2{
+h2 {
     text-align: center;
     margin-bottom: 15px;
 }
 
-.input-box{
+.input-box {
     display: flex;
     gap: 10px;
 }
 
-.input-box input{
+.input-box input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
 }
 
-#addBtn{
+#addBtn {
     padding: 10px 15px;
     background: #4a90e2;
     color: white;
@@ -46,16 +46,16 @@ h2{
     cursor: pointer;
 }
 
-#addBtn:hover{
+#addBtn:hover {
     background: #3d7bc7;
 }
 
-.notes{
+.notes {
     margin-top: 20px;
     list-style: none;
 }
 
-.notes li{
+.notes li {
     background: #f7f7f7;
     padding: 12px;
     margin-top: 10px;
@@ -65,16 +65,17 @@ h2{
     align-items: center;
 }
 
-.note-text{
+.note-text {
     flex: 1;
 }
 
-.btns{
+.btns {
     display: flex;
     gap: 8px;
 }
 
-.edit, .delete{
+.edit,
+.delete {
     padding: 5px 10px;
     border: none;
     border-radius: 6px;
@@ -82,21 +83,22 @@ h2{
     font-size: 14px;
 }
 
-.edit{
+.edit {
     background: #ffc107;
 }
 
-.delete{
+.delete {
     background: #e74c3c;
     color: white;
 }
+
 /* Card wrapper */
 #notesList div {
     background: #ffffff;
     padding: 15px;
     margin-top: 15px;
     border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -127,7 +129,7 @@ h2{
 #notesList div input:focus,
 #notesList div textarea:focus {
     border-color: #4a90e2;
-    box-shadow: 0 0 5px rgba(74,144,226,0.4);
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
 }
 
 /* List styling reset */
@@ -135,6 +137,7 @@ h2{
     list-style: none;
     padding: 0;
 }
+
 /* Button container (optional if you wrap buttons later) */
 .btn-group {
     display: flex;
@@ -168,13 +171,66 @@ h2{
     background: #e74c3c;
     color: white;
 }
+
 #notesList button.saveBtn {
     background: rgb(67, 186, 67);
     color: white;
 }
+
 #notesList button.saveBtn:hover {
     background: #049a24;
 }
+
 #notesList button.deleteBtn:hover {
     background: #c0392b;
 }
+
+#btnTheme {
+    margin-left: 100px;
+    padding: 4px 6px;
+    /* better spacing */
+    background-color: #eef1f5;
+    /* light background */
+    color: #000;
+    /* emoji stays visible */
+    border: 1px solid #b6b6b6;
+    border-radius: 8px;
+    font-size: 20px;
+    /* emoji size */
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Hover effect */
+#btnTheme:hover {
+    background-color: #e1e4e8;
+}
+
+/* Click effect */
+#btnTheme:active {
+    transform: scale(0.95);
+}
+
+.darkTheme {
+    background-color: #001F3F;
+}
+
+.lightTheme {
+    background-color: #AEEEEE;
+}
+
+.innerDark {
+    background-color: #AEEEEE;
+}
+
+.innerLight {
+    background-color: #092847;
+    color: #ffffff;
+}
+
+.headingEdit {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+};
