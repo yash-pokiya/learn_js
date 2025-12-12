@@ -221,11 +221,15 @@ h2 {
 
 .innerDark {
     background-color: #AEEEEE;
+    color: #000;
 }
 
 .innerLight {
     background-color: #092847;
-    color: #ffffff;
+    color: white
+}
+.innerLight #newCard{
+    color: black;
 }
 
 .headingEdit {
