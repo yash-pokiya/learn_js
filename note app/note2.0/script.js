@@ -1,6 +1,17 @@
 let noteInput = document.getElementById("noteInput");
 let addBtn = document.getElementById("addBtn");
 let notesList = document.getElementById("notesList");
+const autoSaveObserver = new MutationObserver(() => {
+    localStorage.setItem("notes", notesList.innerHTML);
+});
+
+// observe EVERYTHING inside notesList
+autoSaveObserver.observe(notesList, {
+    childList: true,
+    subtree: true,
+    characterData: true
+});
+
 
 let createCard = () => {
   if (noteInput.value === "") {
@@ -16,7 +27,6 @@ let createCard = () => {
   cardTitle.textContent = noteInput.value;
   noteInput.value = "";
   console.log(cardTitle);
-  
 
   let cardInfo = document.createElement("textarea");
   cardInfo.setAttribute("class", "textArea");
@@ -48,7 +58,6 @@ addBtn.addEventListener("click", () => {
 
 // ALL EVENTS
 let events = () => {
-
   // DELETE CARD
   let allDeleteBtns = document.querySelectorAll(".deleteBtn");
   allDeleteBtns.forEach((btn) => {
@@ -80,7 +89,6 @@ let events = () => {
         headingDiv.textContent = headingInput.value;
         headingInput.replaceWith(headingDiv);
       }
-
       localStorage.setItem("notes", notesList.innerHTML);
     });
   });
@@ -93,7 +101,6 @@ let events = () => {
 
       let div = card.querySelector(".saved-text");
       let heading = card.firstChild;
-      
 
       if (!div) return;
 
@@ -182,3 +189,13 @@ let themeFunc = (theme) => {
     }
   });
 };
+notesList.addEventListener("input", (e) => {
+  console.log(e.data);
+  
+  if (
+    e.target.classList.contains("textArea") ||
+    e.target.classList.contains("headingEdit")
+  ) {
+    localStorage.setItem("notes", notesList.innerHTML);
+  }
+});

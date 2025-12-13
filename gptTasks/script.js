@@ -53,7 +53,7 @@ addBtn.addEventListener("click", () => {
     });
   });
 });
-filter.addEventListener("keydown", (f) => {
+filter.addEventListener("keypress", (f) => {
   if (f.key === "Enter" && filter.value === "") {
     alert("add task to filter...");
     // return;
