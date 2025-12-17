@@ -3448,7 +3448,28 @@
 // };
 // console.log(x);
 
-let arr = ["yash" , 25];
-let [name,age] = arr;
-console.log(name);
-console.log(age);
+// let arr = ["yash" , 25];
+// let [name,age] = arr;
+// console.log(name);
+// console.log(age);
+
+// let prices = [100, 200, 300];
+
+// let includeGst = prices.map((a) => {
+//     return a+=a*18/100;
+// })
+// console.log(includeGst);
+let cart = [
+  { price: 100, qty: 2 },
+  { price: 50, qty: 4 }
+];
+
+let sumOfCart = cart.reduce((acc,curr) => {
+    acc+=curr.price*curr.qty;
+    return acc;
+},0) 
+console.log(sumOfCart);
+
+let nums = [1, 2, 2, 3, 4, 4, 5];
+let newArr = new Set(nums);
+console.log(newArr);
