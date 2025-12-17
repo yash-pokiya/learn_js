@@ -79,7 +79,7 @@ let startBtn = document.getElementById("start");
 let stopBtn = document.getElementById("stop");
 
 let randomColor = () => {
-  let hex = "123456789ABCDEFG";
+  let hex = "0123456789ABCDEF";
   let color = "#";
   for (let i = 1; i <= 6; i++) {
     color += hex[Math.floor(Math.random() * 16)];

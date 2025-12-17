@@ -103,7 +103,7 @@ let events = () => {
       let heading = card.firstChild;
 
       if (!div) return;
-
+       
       let textArea = document.createElement("textarea");
       textArea.classList.add("textArea");
       textArea.value = div.textContent;
