@@ -1,0 +1,33 @@
+#addBtn{
+    margin: 10px;
+}
+li{
+    margin-right: 20%;
+}
+.complete{
+    text-decoration: line-through;
+}
+.themeBtn{
+    margin-left: 90%;
+    padding: 10px;
+    background-color: rgb(48, 55, 55);
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+.light{
+    background-color: white;
+    color: rgb(48, 55, 55);
+}
+.dark{
+    background-color:  rgb(48, 55, 55);
+    color: white;
+}
+.themeBtnDark{
+    margin-left: 90%;
+    padding: 10px;
+    background-color: rgb(239, 225, 225);
+    border-radius: 10px;
+    color:  rgb(48, 55, 55);
+    border: none;
+}

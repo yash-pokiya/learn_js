@@ -1,0 +1,58 @@
+/* Background Gradient */
+.bg-gradient {
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #4a148c);
+}
+
+/* To-Do Container */
+.todo-box {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    border-radius: 18px;
+}
+
+/* Input Field */
+.task-input {
+    padding: 12px;
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #ddd;
+    background: #f4f4f4;
+}
+
+.add-btn {
+    background-color: #ff6b3d;
+    color: white;
+    border-radius: 0 30px 30px 0;
+    font-weight: 600;
+}
+
+.add-btn:hover {
+    background-color: #ff5722;
+}
+
+/* Task Items */
+.task-item {
+    padding: 12px 8px;
+    margin-bottom: 12px;
+    background: #fafafa;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.task-item:hover {
+    background: #f0f0f0;
+}
+
+/* Delete Button */
+.delete-btn {
+    font-size: 35px;
+    cursor: pointer;
+    color: #777;
+}
+
+.delete-btn:hover {
+    color: #ff3b30;
+}
+.line-threw{
+    text-decoration: line-through;
+}
