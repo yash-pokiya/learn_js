@@ -3459,17 +3459,123 @@
 //     return a+=a*18/100;
 // })
 // console.log(includeGst);
-let cart = [
-  { price: 100, qty: 2 },
-  { price: 50, qty: 4 }
+// let cart = [
+//   { price: 100, qty: 2 },
+//   { price: 50, qty: 4 }
+// ];
+
+// let sumOfCart = cart.reduce((acc,curr) => {
+//     acc+=curr.price*curr.qty;
+//     return acc;
+// },0) 
+// console.log(sumOfCart);
+
+// let nums = [1, 2, 2, 3, 4, 4, 5];
+// let newArr = new Set(nums);
+// console.log(newArr);
+
+// const obj = {a: 1, b: 2, c: 3};
+
+// const map = new Map(Object.entries(obj));
+// console.log(map);
+
+// let arr = [["name","yash"],["age" , 18],["gender" , "male"]];
+
+// let newObj = Object.fromEntries(arr);
+// console.log(newObj);
+
+// let user = async() => {
+//     let data = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let final = await data.json();
+//     final[0].id = 2;
+//     final[0].name = "Ervin Howell";
+//     // console.log(JSON.stringify(final));
+//     //     final.forEach((a) => {
+//     //     console.log(a.name.trim());
+//     // })
+//     // final.forEach((a) => {
+//     //     console.log(a.email.toLowerCase());
+//     // })
+//     let uniqueMap = new Map();
+//     final.forEach((a) => {uniqueMap.set(a.id,a.name)})
+//     console.log(uniqueMap);
+// }
+// user();
+
+// let product = async() => {
+//     let data = await fetch("https://dummyjson.com/products?sortBy=title&order=asc");
+//     let final = await data.json();
+//     console.log(JSON.stringify(final));
+    
+// }
+// product();
+const userCarts = [
+  {
+    userId: 1,
+    userName: "Leanne Graham",
+    cart: [
+      { id: 101, name: "Mechanical Keyboard", price: 4500 },
+      { id: 102, name: "Gaming Mouse", price: 1200 }
+    ]
+  },
+  {
+    userId: 2,
+    userName: "Ervin Howell",
+    cart: [
+      { id: 103, name: "24-inch Monitor", price: 12000 },
+      { id: 106, name: "Laptop Stand", price: 1500 },
+      { id: 109, name: "Desk Mat", price: 600 }
+    ]
+  },
+  {
+    userId: 3,
+    userName: "Clementine Bauch",
+    cart: [
+      { id: 107, name: "Noise Cancelling Headphones", price: 8000 }
+    ]
+  },
+  {
+    userId: 4,
+    userName: "Patricia Lebsack",
+    cart: [
+      { id: 105, name: "Webcam HD", price: 3200 },
+      { id: 110, name: "LED Desk Lamp", price: 1800 },
+      { id: 104, name: "USB-C Hub", price: 850 }
+    ]
+  },
+  {
+    userId: 5,
+    userName: "Chelsey Dietrich",
+    cart: [
+      { id: 108, name: "External SSD (1TB)", price: 9500 },
+      { id: 101, name: "Mechanical Keyboard", price: 4500 }
+    ]
+  }
 ];
 
-let sumOfCart = cart.reduce((acc,curr) => {
-    acc+=curr.price*curr.qty;
-    return acc;
-},0) 
-console.log(sumOfCart);
+let filteredData = userCarts.map((a) => {
+    let sum = a.cart.reduce((acc,curr) => acc+=curr.price , 0);
+    return {
+        user : a.userName,
+        total : sum
+    }
+})
 
-let nums = [1, 2, 2, 3, 4, 4, 5];
-let newArr = new Set(nums);
-console.log(newArr);
+console.log(filteredData);
+
+let addDiscAndGst = filteredData.map((a) => {
+    let disc = 10;
+    let gst = 18;
+    if(a.total > 7500){
+         a.total -= (a.total*disc) /100;
+    }else{
+        a.total
+    }
+    a.total += (a.total*gst) / 100;
+    return {
+        user : a.user,
+        priceAfterDicsAndGst : a.total.toFixed(),
+    }
+})
+console.log(addDiscAndGst);
+console.log(globalThis);

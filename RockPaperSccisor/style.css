@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #1a1a2e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    background: #16213e;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.score p { font-size: 0.8rem; opacity: 0.7; }
+.score span { font-size: 2rem; font-weight: bold; color: #4ecca3; }
+
+.display-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.choice-box div {
+    font-size: 3rem;
+    background: #0f3460;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.vs { font-weight: bold; color: #e94560; }
+
+#result-text {
+    margin-bottom: 2rem;
+    height: 1.5rem;
+    color: #4ecca3;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.choice-btn {
+    font-size: 2.5rem;
+    background: #e94560;
+    border: none;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.choice-btn:hover {
+    transform: scale(1.1);
+    background: #ff4d6d;
+}
+
+#resetBtn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#resetBtn:hover { opacity: 100; }
