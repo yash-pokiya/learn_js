@@ -55,40 +55,46 @@ function reset(cCount, pCount, tCount) {
   if (pCount + cCount + tCount === 13) {
     alert("Only Play for 10 Times..!");
     return false;
-  }else{
+  } else {
     return true;
   }
 }
 rock.addEventListener("click", () => {
-  if(!reset(cCount, pCount, tCount)){
+  setTimeout(() => {
+    if (!reset(cCount, pCount, tCount)) {
+      return;
+    }
+    userInput = "R";
+    let comp = guess();
+    playerChoiceDisplay.innerHTML = "✊";
+    gameRes(userInput, comp);
     return;
-  }
-  userInput = "R";
-  let comp = guess();
-  playerChoiceDisplay.innerHTML = "✊";
-  gameRes(userInput, comp);
-  return;
+  }, 500);
 });
 
 paper.addEventListener("click", () => {
-  if(!reset(cCount, pCount, tCount)){
+  setTimeout(() => {
+    if (!reset(cCount, pCount, tCount)) {
+      return;
+    }
+    userInput = "P";
+    let comp = guess();
+    playerChoiceDisplay.innerHTML = "✋";
+    gameRes(userInput, comp);
     return;
-  }
-  userInput = "P";
-  let comp = guess();
-  playerChoiceDisplay.innerHTML = "✋";
-  gameRes(userInput, comp);
-  return;
+  }, 500);
 });
 scissors.addEventListener("click", () => {
-  if(!reset(cCount, pCount, tCount)){
+  setTimeout(() => {
+    if (!reset(cCount, pCount, tCount)) {
+      return;
+    }
+    userInput = "S";
+    let comp = guess();
+    playerChoiceDisplay.innerHTML = "✌️";
+    gameRes(userInput, comp);
     return;
-  }
-  userInput = "S";
-  let comp = guess();
-  playerChoiceDisplay.innerHTML = "✌️";
-  gameRes(userInput, comp);
-  return;
+  },500);
 });
 
 resetBtn.addEventListener("click", () => {
