@@ -28,23 +28,23 @@
     <div class="container pb-5">
         <div class="row g-4">
             <div class="col-lg-4">
-                <div class="profile-card text-center p-4 mb-4">
+                <div id="profileCard" class="profile-card text-center p-4 mb-4">
                     <div class="avatar-circle mx-auto mb-3">
                         <i class="fa-solid fa-user"></i>
                     </div>
-                    <h3 class="user-name">Your Name</h3>
-                    <p class="customer-id text-muted">Customer Id : #ABC1234</p>
-                    <button class="btn btn-edit-profile px-4 py-1">Edit</button>
+                    <h3 class="user-name" id="userName">Your Name</h3>
+                    <p class="customer-id text-muted" id="customerId">Customer Id : #ABC1234</p>
+                    <button id="editBtn" class="btn btn-edit-profile px-4 py-1">Edit</button>
                 </div>
 
                 <div class="info-card p-4">
                     <h4 class="info-title mb-4">Information</h4>
                     <ul class="list-unstyled info-list">
-                        <li><i class="fa-solid fa-cake-candles"></i> <strong>Age :</strong> XX</li>
-                        <li><i class="fa-solid fa-venus-mars"></i> <strong>Gender :</strong> ______</li>
-                        <li><i class="fa-solid fa-location-dot"></i> <strong>City :</strong> ______</li>
-                        <li><i class="fa-solid fa-phone"></i> <strong>Phone :</strong> +91 XXXXXXXXXX</li>
-                        <li><i class="fa-solid fa-envelope"></i> <strong>Mail :</strong> yourname@gmail.com</li>
+                        <li ><i class="fa-solid fa-cake-candles"></i> <strong id="age">Age :</strong></li>
+                        <li><i class="fa-solid fa-venus-mars"></i> <strong  id="gender">Gender :</strong></li>
+                        <li ><i class="fa-solid fa-location-dot"></i> <strong  id="city">City :</strong> </li>
+                        <li ><i class="fa-solid fa-phone"></i> <strong id="phone">Phone :</strong> </li>
+                        <li><i class="fa-solid fa-envelope"></i> <strong  id="userEmail">Mail :</strong> </li>
                     </ul>
                 </div>
             </div>
@@ -102,5 +102,7 @@
 </div>
 
 <script src="../javascript/script.js"></script>
+<script src="../javascript/login.js"></script>
+<!-- <script src="../javascript/userProfile.js"></script> -->
 </body>
 </html>

@@ -228,123 +228,6 @@ h1, h2, h3, .navbar-brand {
     }
 }
 /* =========================================
-   APPENDABLE SIGN-UP MODULE STYLES
-   ========================================= */
-
-#signup-module {
-    background-color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
-}
-
-#signup-module .btn-nav-custom {
-    background-color: #d9bc9f;
-    color: white;
-    border: none;
-    border-radius: 8px;
-}
-
-#signup-module .logo-placeholder {
-    width: 35px;
-    height: 35px;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ddd;
-}
-
-/* Outer Container (Tan Background) */
-#signup-module .signup-outer-card {
-    background-color: #f5e6d3;
-    border-radius: 24px;
-    width: 100%;
-    max-width: 850px;
-}
-
-/* Inner Form Card (White) */
-#signup-module .signup-inner-card {
-    background-color: #ffffff;
-    border-radius: 18px;
-    width: 100%;
-    max-width: 550px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-/* Header Badge */
-#signup-module .badge-header {
-    background-color: #d9bc9f;
-    color: #5d4037;
-    padding: 10px 35px;
-    border-radius: 12px;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    display: inline-block;
-}
-
-#signup-module .welcome-heading {
-    font-family: 'Playfair Display', serif;
-    color: #5d4037;
-    font-weight: 700;
-}
-
-/* Custom Input Fields */
-#signup-module .custom-input-group {
-    background-color: #f3e5d5;
-    border-radius: 12px;
-    height: 50px;
-    border: 1px solid transparent;
-    transition: 0.3s;
-}
-
-#signup-module .custom-input-group:focus-within {
-    border-color: #b19481;
-    background-color: #eee0d0;
-}
-
-#signup-module .form-control-plain {
-    background: transparent;
-    border: none;
-    outline: none;
-    width: 100%;
-    font-size: 0.9rem;
-    color: #5d4037;
-}
-
-/* Sign Up Button */
-#signup-module .btn-signup-action {
-    background-color: #b19481;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-#signup-module .btn-signup-action:hover {
-    background-color: #8d6e63;
-    transform: translateY(-2px);
-}
-
-#signup-module .footer-text {
-    font-size: 0.9rem;
-    color: #333;
-}
-
-/* Responsive Handling */
-@media (max-width: 768px) {
-    #signup-module .signup-outer-card {
-        border-radius: 0;
-        margin: 0 -15px; 
-        padding: 40px 15px !important;
-    }
-    
-    #signup-module .signup-inner-card {
-        padding: 30px 15px !important;
-    }
-}
-/* =========================================
    APPENDABLE DASHBOARD MODULE STYLES
    ========================================= */
 
@@ -640,4 +523,251 @@ h1, h2, h3, .navbar-brand {
 /* Remove Bootstrap default focus shadow */
 .btn-primary-custom:focus {
     box-shadow: none;
+}
+/* =========================================
+   THE DAILY GRIND - SIGN-UP MODULE
+   ========================================= */
+
+#signup-module {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* 1. LAYOUT & CARDS */
+/* Outer Tan Card */
+#signup-module .signup-outer-card {
+    background-color: #f5e6d3;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 850px; /* Wider to accommodate 2 columns */
+}
+
+/* White Inner Card */
+#signup-module .signup-inner-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 750px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* 2. HEADERS & TEXT */
+#signup-module .badge-header {
+    background-color: #d9bc9f;
+    color: #5d4037;
+    padding: 10px 35px;
+    border-radius: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    display: inline-block;
+}
+
+#signup-module .welcome-heading {
+    font-family: 'Playfair Display', serif;
+    color: #5d4037;
+    font-weight: 700;
+}
+
+/* 3. FORM INPUTS & GROUPS */
+#signup-module .custom-input-group {
+    background-color: #f3e5d5;
+    border-radius: 12px;
+    height: 50px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+#signup-module .custom-input-group:focus-within {
+    border-color: #b19481;
+}
+
+#signup-module .form-control-plain {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #5d4037;
+    padding: 10px 0;
+}
+
+/* Manual Age Input - Hide Spinners */
+#signup-module input[type=number]::-webkit-inner-spin-button, 
+#signup-module input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* 4. SELECT / DROPDOWN STYLING */
+#signup-module select.form-control-plain {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%238d6e63' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 30px;
+}
+
+/* Styling the Option List */
+#signup-module select#gender option {
+    background-color: #e6ccb2;
+    color: #000000;
+}
+
+#signup-module select#gender option[disabled] {
+    color: #a08d82;
+}
+
+/* 5. INTERACTIVE ELEMENTS */
+#signup-module #passToggle {
+    cursor: pointer;
+    color: #8d6e63;
+}
+
+#signup-module .btn-signup-action {
+    background-color: #b19481;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#signup-module .btn-signup-action:hover {
+    background-color: #8d6e63;
+    transform: translateY(-2px);
+}
+
+#signup-module .footer-text {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* 6. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    #signup-module .signup-outer-card {
+        border-radius: 0;
+        margin: 0 -15px; /* Full width for small screens */
+    }
+    
+    #signup-module .signup-inner-card {
+        padding: 30px 15px !important;
+    }
+
+    #signup-module .row > div {
+        margin-bottom: 1rem; /* Stack columns with spacing on mobile */
+    }
+}
+.edit-form {
+  background: #f9f1e7;
+  padding: 24px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.edit-form h3 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+  color: #5a3a1c;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  color: #6d4c2f;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d8b892;
+  background: #fffaf5;
+  font-size: 0.9rem;
+  color: #3c2a1a;
+  outline: none;
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #cf9b67;
+  box-shadow: 0 0 0 2px rgba(207,155,103,0.2);
+}
+
+.form-group input:disabled {
+  background: #eee;
+  cursor: not-allowed;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.btn-group button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+#saveProfileBtn {
+  background: linear-gradient(135deg, #cf9b67, #b87a45);
+  color: #fff;
+}
+
+#saveProfileBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(207,155,103,0.4);
+}
+
+#cancelEditBtn {
+  background: #e6d2b8;
+  color: #5a3a1c;
+}
+
+#cancelEditBtn:hover {
+  background: #d8b892;
+}
+
+/* Smooth Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+#btnBack{
+    border-radius: 50px;
+    margin-left: -300px;
+    border: #f9f1e7;
+}
+#backBtnImg{
+    object-fit: cover;
+    height: 30px;
 }
