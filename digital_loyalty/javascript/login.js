@@ -57,7 +57,7 @@ const loadData = () => {
   phone.textContent += " " + logedInUser.phone
   userEmail.textContent += " " + logedInUser.email
   userName.textContent  = logedInUser.userName.charAt(0).toUpperCase() + logedInUser.userName.slice(1);
-  customerId = "Customer Id" + logedInUser.customerId;
+  customerId.textContent = "Customer Id : " + logedInUser.customerId;
 };
 if (window.location.href.includes("user-profile.html")) {
   loadData();
@@ -140,7 +140,7 @@ alert("Profile Updated Successfully!");
 window.location.reload();
 }
 //EVENT-LISTENERS
-
+  
 if (loginBtn)
   loginBtn.addEventListener("click", (e) => {
     e.preventDefault();
